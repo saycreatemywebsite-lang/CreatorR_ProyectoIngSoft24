@@ -13,19 +13,23 @@
 </head>
 
 <body>
+  <div id="currency-popup" class="popup">
+  <div class="popup-box">
+    <h2>Select Your Region</h2>
+    <button onclick="setCurrency('INR')">India 🇮🇳</button>
+    <button onclick="setCurrency('USD')">Other Country 🌍</button>
+  </div>
+</div>
 
 <header>
-  <div class="logo">CREATORR</div><img src="CRLOGOc.png" alt="Logo" style="width: 100px; height: auto;">
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Work</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="logo-box">
+    <img src="CRLOGOc.png" alt="Createorr Logo">
+    <span>Creatorr</span>
+  </div>
 </header>
 
 <section id="home" class="hero reveal">
+  <h1 class="typing-text"></h1>
   <div class="hero-content">
     <h1>I design websites that make people stay.</h1>
     <p>Minimal. Fast. Powerful. Built to impress and convert.</p>
@@ -37,16 +41,20 @@
   <h2>Services</h2>
   <div class="cards">
     <div class="card">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
       <h3>Static Website</h3>
-      <p>Clean and fast — Starting ₹2000</p>
+      <p>Clean and fast — Starting <b class="price" data-inr="2000" data-usd="30">₹2000+</b></p>
+      
     </div>
     <div class="card">
+        <img src="https://cdn.dribbble.com/userupload/39039843/file/original-adb8eff4f5988e4cd53970eaa10544b8.png?resize=752x&vertical=center">
       <h3>Portfolio Website</h3>
-      <p>Personal branding — Starting ₹3000</p>
+      <p>Personal branding — Starting <b class="price" data-inr="3000" data-usd="30">₹3000+</b></p>
     </div>
     <div class="card">
+        <img src="https://cdn.dribbble.com/userupload/9000437/file/original-05ce7878ecc282d0bdbc476f002b6087.png?resize=752x&vertical=center">
       <h3>E-commerce</h3>
-      <p>Online store — Starting ₹10000</p>
+      <p>Online store — Starting <b class="price" data-inr="10,000" data-usd="30">₹10,000+</b></p>
     </div>
   </div>
 </section>
@@ -76,14 +84,15 @@
   </div>
 </section>
 
-<section id="pricing" class="section reveal">
-  <h2>Pricing Plans</h2>
 
+
+<section id="pricing" class="section reveal">
+  <h2>Pricing Plans</h2>  
   <div class="cards">
 
     <div class="card">
       <h3>Basic</h3>
-      <h2>₹2000</h2>
+      <h2> <p class="price" data-inr="2000" data-usd="30">₹2000</p></h2>
       <p>✔ 1-3 Pages</p>
       <p>✔ Static Website</p>
       <p>✔ Mobile Friendly</p>
@@ -91,7 +100,7 @@
 
     <div class="card">
       <h3>Standard</h3>
-      <h2>₹5000</h2>
+      <h2><p class="price" data-inr="5000" data-usd="30">₹5000</p></h2>
       <p>✔ 5 Pages</p>
       <p>✔ Portfolio / Blog</p>
       <p>✔ Basic SEO</p>
@@ -99,7 +108,7 @@
 
     <div class="card">
       <h3>Premium</h3>
-      <h2>₹10000+</h2>
+      <h2>      <p class="price" data-inr="10000" data-usd="30">₹10000+</p></h2>
       <p>✔ Full Website</p>
       <p>✔ E-commerce Ready</p>
       <p>✔ Advanced Features</p>
@@ -108,36 +117,160 @@
   </div>
 </section>
 
+
+<div class="ai-trust">
+  <p>⚡ Designed with precision. Driven by creative intelligence.</p>
+</div>
+
+<section class="section reveal">
+  <h2>Client Voices</h2>
+
+  <div class="cards testimonials">
+
+    <div class="card testimonial">
+      <p class="quote">
+        “The website didn’t just look good… it felt premium. Exactly what I needed.”
+      </p>
+      <div class="client">
+        <span class="client-name">Rahul Sharma</span>
+        <span class="client-role">Business Owner</span>
+      </div>
+    </div>
+
+    <div class="card testimonial">
+      <p class="quote">
+        “Fast delivery, clean design, and smooth performance. Highly recommended.”
+      </p>
+      <div class="client">
+        <span class="client-name">Ayesha Khan</span>
+        <span class="client-role">Freelancer</span>
+      </div>
+    </div>
+
+    <div class="card testimonial">
+      <p class="quote">
+        “My brand finally looks professional online. Great experience overall.”
+      </p>
+      <div class="client">
+        <span class="client-name">Arjun Mehta</span>
+        <span class="client-role">Startup Founder</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider">
+  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+</div>
+
+<section class="section reveal">
+  <h2>Why Choose Me</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Fast Delivery</h3>
+      <p>I deliver projects quickly without compromising quality.</p>
+    </div>
+
+    <div class="card">
+      <h3>Modern Design</h3>
+      <p>Clean, stylish and future-ready UI.</p>
+    </div>
+
+    <div class="card">
+      <h3>Support</h3>
+      <p>I provide support even after project completion.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>My Process</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>1. Discussion</h3>
+      <p>Understanding your needs and ideas.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Design</h3>
+      <p>Creating a clean and modern layout.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Development</h3>
+      <p>Building fast and responsive website.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. Delivery</h3>
+      <p>Final testing and launch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>FAQs</h2>
+  <br>
+  <div class="card">
+    <h3>How long does it take?</h3>
+    <p>Usually 2-7 days depending on project.</p>
+  </div>
+  <br>
+  <div class="card">
+    <h3>Do you provide support?</h3>
+    <p>Yes, I provide support after delivery.</p>
+  </div>
+  <br>
+  <div class="card">
+    <h3>Can you redesign my website?</h3>
+    <p>Yes, I can redesign and improve your existing site.</p>
+  </div>
+</section>
+
 <section id="about" class="section reveal">
   <h2>About Me</h2>
 
   <div class="about-box">
 
-    <img src="CRLOGO.png" alt="profile">
+   <img src="CRLOGO.png" alt="profile">
 
     <div>
-      <p class="about-highlight">
-        I don’t just create websites — I shape digital experiences that speak before you do.
+
+      <p class="fade-text">
+        I don’t just build websites — I design digital experiences that make people stay, explore, and trust.
       </p>
 
-      <p>
-        I'm a web creator focused on crafting clean, modern and performance-driven websites.
-        Every project is built with a simple mindset — make it look premium, make it work flawlessly.
+      <p class="fade-text">
+        I’m a web creator focused on modern UI, performance, and user psychology.
+        My goal is simple — build websites that not only look premium, but also deliver real results.
       </p>
 
-      <p>
-        I believe your website is more than just a design… it's your first impression, your identity, your silent pitch.
+      <p class="fade-text">
+        Every project I work on is crafted with precision, creativity, and a mindset of continuous improvement.
+        I believe design is not decoration — it's communication.
       </p>
 
-      <ul>
-        <li>✔ Minimal yet powerful design</li>
-        <li>✔ Fully responsive across all devices</li>
-        <li>✔ Built with performance in mind</li>
-      </ul>
+      <div class="about-details">
+
+        <p><strong>📧 Email:</strong> yourname@gmail.com</p>
+        <p><strong>📱 Phone:</strong> +91 9876543210</p>
+        <p><strong>📍 Location:</strong> India</p>
+
+        <p><strong>🎓 Qualification:</strong> Higher Secondary (12th) + Self-taught Web Developer</p>
+
+        <p><strong>💼 Skills:</strong> HTML, CSS, JavaScript, Responsive Design, UI/UX Thinking</p>
+
+        <p><strong>⚡ Special Focus:</strong> Fast loading, clean UI, and conversion-based design</p>
+
+      </div>
 
       <p class="signature">
-        — Creatorr
+        — Createorr
       </p>
+
     </div>
 
   </div>
